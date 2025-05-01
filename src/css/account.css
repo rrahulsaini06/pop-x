@@ -1,13 +1,4 @@
-/* body {
-  background: linear-gradient(135deg, #c3ecf5, #e4d9f5);
-  height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-container{
+.container{
   width: 40%;
   max-width: 350px;
   padding: 30px;
@@ -22,11 +13,6 @@ container{
 .header{
 flex: 1;
 }
-
-.user-img{
-
-}
-
 .profile{
 flex: 1;
 flex-direction: row;
@@ -36,7 +22,5 @@ flex-wrap: wrap;
 .details{
   flex: 4;
 }
-.username{
-    
-}
+
 
