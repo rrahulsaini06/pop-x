@@ -1,4 +1,4 @@
-import '../css/account.css';
+import '../css/Account.css';
 import profilePic from '../profile.png.png';
  function Profile(){
     return(
