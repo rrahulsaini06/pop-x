@@ -7,7 +7,7 @@ function CreateAccount() {
     email: '',
     password: '',
   });
-
+  const [agency, setAgency] = useState("yes");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -68,6 +68,32 @@ function CreateAccount() {
             required
           />
         </div>
+
+        <label for="Agency">Are you an Agency?*</label>
+                    <input
+                        type="radio"
+                        name="agency"
+                        value="yes"
+                        id="yes"
+                        checked={agency === "yes"}
+                        onChange={(e) =>
+                            setAgency(e.target.value)
+                        }
+                    />
+                    yes
+                    <input
+                        type="radio"
+                        name="agency"
+                        value="no"
+                        id="no"
+                        checked={agency === "no"}
+                        onChange={(e) =>
+                            setAgency(e.target.value)
+                        }
+                    />
+                    no
+                   
+
         <button type="submit" style={{ marginTop: '20px' }}>Create Account</button>
       </form>
     </div>

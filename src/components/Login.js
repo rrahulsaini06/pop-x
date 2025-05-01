@@ -18,20 +18,29 @@ import '../css/Login.css';
 
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="test" {...register("example")} />
+   <div className="container">
+    <div className="heading">
+      <h1>
+      Signin to your PopX account
+      </h1>
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+     <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-group"> 
+            <input placeholder="Enter email address " defaultValue="" {...register("example")} />
+  
+      </div>
+< div className="form-group">
+   <input placeholder="Enter password" {...register("exampleRequired", { required: true })} />
+</div>
 
-
-      {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
+     
       {errors.exampleRequired && <span>This field is required</span>}
 
 
-      <input type="submit" />
-    </form>
+      <button type="submit">Login</button>
+    </form> </div>
+    
   )
 }
 
